@@ -10,7 +10,9 @@
     "build": "npm run clean && npm run babel-build",
     "babel-build": "babel -d ./build ./server -s",
     "clean": "rimraf build",
-    "heroku-postbuild": "cd client && npm install && npm run build"
+    "heroku-postbuild": "cd client && npm install && npm run build",
+    "test": "jest --config ./jest.config.json",
+    "test:watch": "npm run test -- --watch"
   },
   "dependencies": {
     "@babel/cli": "^7.10.1",
@@ -28,6 +30,7 @@
     "rimraf": "^3.0.2"
   },
   "devDependencies": {
-    "@babel/plugin-transform-runtime": "^7.10.1"
+    "@babel/plugin-transform-runtime": "^7.10.1",
+    "jest": "^26.0.1"
   }
 }
