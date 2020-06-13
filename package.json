@@ -5,6 +5,8 @@
   "scripts": {
     "devstart": "babel-node ./src/bin/www",
     "start": "npm run build && node ./build/bin/www",
+    "start:dev": "npm run build:client && npm run build && node ./build/bin/www",
+    "build:client": "cd client && npm run build",
     "build": "npm run clean && npm run babel-build",
     "babel-build": "babel -d ./build ./server -s",
     "clean": "rimraf build", 
