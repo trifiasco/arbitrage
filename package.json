@@ -3,7 +3,12 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "devstart": "babel-node ./src/bin/www",
+    "start": "npm run build && node ./build/bin/www",
+    "build": "npm run clean && npm run babel-build",
+    "babel-build": "babel -d ./build ./server -s",
+    "clean": "rimraf build", 
+    "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "dependencies": {
     "@babel/cli": "^7.10.1",
