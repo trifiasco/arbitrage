@@ -9,13 +9,14 @@
     "build:client": "cd client && npm run build",
     "build": "npm run clean && npm run babel-build",
     "babel-build": "babel -d ./build ./server -s",
-    "clean": "rimraf build", 
+    "clean": "rimraf build",
     "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "dependencies": {
     "@babel/cli": "^7.10.1",
     "@babel/core": "^7.10.2",
     "@babel/preset-env": "^7.10.2",
+    "axios": "^0.19.2",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "express": "~4.16.1",
