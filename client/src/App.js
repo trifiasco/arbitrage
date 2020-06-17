@@ -4,7 +4,7 @@ import './App.css';
 
 function App() {
   const fetchTest = () => {
-    fetch('/users')
+    fetch('/arbitrage')
     .then(res => console.log(res));
   }
   return (

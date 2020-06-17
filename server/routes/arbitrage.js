@@ -6,7 +6,7 @@ import arbitrage from '../arbitrageEngine';
 router.get('/', async (req, res, next) => {
   const response = await arbitrage();
   console.log(response);
-  res.send(response);
+  res.sendStatus(response);
 });
 
 module.exports = router;
